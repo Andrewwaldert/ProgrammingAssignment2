@@ -4,17 +4,24 @@
 ## Write a short comment describing this function
 
 # This function will create a Cache Marix with the follwing parameters: 
-# 1. set the value of the matrix 
-# 2. get the value of the matrix 
 
 makeCacheMatrix <- function(x = matrix()) {
+
 i <- NULL
+
+# 1. set the value of the matrix 
     set <- function(y) {
         x <<- y
         i <<- NULL
+        
     }
+    # 2. get the value of the matrix 
     get <- function() x
+    
+    # 3. set the value of the inverse matrix 
     setinverse <- function(inv) i <<- inv
+    
+    # 4. get the value of the inverse matrix 
     getinverse <- function() i
     list(
         set = set,
@@ -24,26 +31,25 @@ i <- NULL
     )
 }
 
-
-## Write a short comment describing this function
-
-# 1. set the value of the inverse matrix 
-# 2. get the value of the inverse matrix 
+# Cache Solve 
 
 cacheSolve <- function(x, ...) {
+
        i <- x$getinverse()
     if(!is.null(i)) {
         message("getting cached data")
         return(i)
+   
     }
     m <- x$get()
     i <- solve(m, ...)
     x$setinverse(i)
     i
+    
 }
 
 
-Example: 
+# Example: 
 Matrix <- makeCacheMatrix(matrix(c(5, 6, 7, 8) c(2, 2)))
 cacheSolve(Matrix)
 

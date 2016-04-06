@@ -41,3 +41,14 @@ cacheSolve <- function(x, ...) {
     x$setinverse(i)
     i
 }
+
+
+Example: 
+Matrix <- makeCacheMatrix(matrix(c(5, 6, 7, 8) c(2, 2)))
+cacheSolve(Matrix)
+
+     [,1] [,2]
+[1,]   -4  3.5
+[2,]    3 -2.5
+
+

@@ -3,7 +3,9 @@
 
 ## Write a short comment describing this function
 
-# This function will 
+# This function will create a Cache Marix with the follwing parameters: 
+# 1. set the value of the matrix 
+# 2. get the value of the matrix 
 
 makeCacheMatrix <- function(x = matrix()) {
 i <- NULL
@@ -24,6 +26,9 @@ i <- NULL
 
 
 ## Write a short comment describing this function
+
+# 1. set the value of the inverse matrix 
+# 2. get the value of the inverse matrix 
 
 cacheSolve <- function(x, ...) {
        i <- x$getinverse()
